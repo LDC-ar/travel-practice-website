@@ -11,15 +11,23 @@
   &__title {
     font-weight: 300;
     color: $mainBlue;
-    font-size: 6.6rem;
+    font-size: 3.4rem;
     margin: 0;
+    
+    @mixin atSmall {
+      font-size: 6.6rem;
+    }
   }
   
   &__subtitle {
     font-weight: 300;
     color: $mainBlue;
-    font-size: 4.2rem;
+    font-size: 1.3rem;
     margin: 0;
+
+    @mixin atSmall {
+      font-size: 4.4rem;
+    }
   }
 
   &__description {
