@@ -4,7 +4,7 @@
   color: $mainBlue;
   
   @mixin atSmall {
-    font-size: 4.6rem;
+    font-size: 5.5rem;
   }
   
   &--centered {
@@ -14,23 +14,39 @@
   &--orange {
     color: $mainOrange;
   }
+
+  &--white {
+    color: white;
+  }
   
   &--small {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     
     @mixin atSmall {
-      font-size: 3rem;
+      font-size: 2.7rem;
+    }
+  }
+
+  &--normal {
+    font-size: 2.5rem;
+    
+    @mixin atSmall {
+      font-size: 4.2rem;
     }
   }
 
   &--narrow {
-    max-width: 500px;
+    max-width: 450px;
     margin-left: auto;
     margin-right: auto;
   }
 
   &--light {
     font-weight: 100;
+  }
+
+  &--regular {
+    font-weight: 400;
   }
 
   &--mb-small {

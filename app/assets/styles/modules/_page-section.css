@@ -2,7 +2,7 @@
   padding: 2rem 0;
   
   @mixin atMedium {
-    padding: 5rem 0;
+    padding: 2rem 0;
   }
 
   &--blue {
