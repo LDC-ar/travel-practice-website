@@ -16,6 +16,10 @@
       margin-bottom: 6.2rem;
     }
   }
+  
+  &--left {
+    padding-left: 110px;
+  }
 
   .wrapper {
     padding-left: 0;

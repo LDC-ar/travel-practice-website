@@ -17,6 +17,13 @@
   &__column {
     flex-direction: column;
     
+    &--until-small {
+      flex-direction: column;
+      
+      @mixin atSmall {
+        flex-direction: row;
+      }
+    }
     &--until-medium {
       flex-direction: column;
       
@@ -26,15 +33,31 @@
     }
   }
 
-  &__justify-sb{
+  &__justify-sb {
     justify-content: space-between;
   }
 
-  &__gap--after-medium {
-    gap: 0rem;
-    
-    @mixin atMedium {
-      gap: 6rem;
+  &__alignitems-start {
+    align-items: flex-start;
+  }
+
+  &__gap {
+    gap: 3rem;
+
+    &--after-medium {
+      gap: 0rem;
+      
+      @mixin atMedium {
+        gap: 6rem;
+      }
+      
+      &-x2 {
+        gap: 3rem;
+
+        @mixin atMedium {
+          gap: 12rem;
+        }
+      }
     }
   }
 
