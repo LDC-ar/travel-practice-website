@@ -1,0 +1,49 @@
+.flex {
+  display: flex;
+  
+  &__wrap {
+    flex-wrap: wrap;
+  }
+
+  &__nowrap {
+    flex-wrap: nowrap;
+  }
+
+  &__row {
+    flex-direction: row;
+    
+  }
+  
+  &__column {
+    flex-direction: column;
+    
+    &--until-medium {
+      flex-direction: column;
+      
+      @mixin atMedium {
+        flex-direction: row;
+      }
+    }
+  }
+
+  &__justify-sb{
+    justify-content: space-between;
+  }
+
+  &__gap--after-medium {
+    gap: 0rem;
+    
+    @mixin atMedium {
+      gap: 6rem;
+    }
+  }
+
+  &__grow-1 {
+    flex-grow: 1;
+  }
+
+  &__grow-2 {
+    flex-grow: 2;
+  }
+}
+

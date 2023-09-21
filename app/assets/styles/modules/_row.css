@@ -1,0 +1,42 @@
+.row {
+
+  &__mb--until-medium {
+    margin-bottom: 2rem;
+  }
+
+  @mixin atMedium {
+
+    &__mb--until-medium {
+      margin-bottom: 0;
+    }
+
+    &__medium_4 {
+      width: 33.33%;
+
+      &--larger {
+        width: 35.7%;
+      }
+    }
+    
+    &__medium_5 {
+      width: 41.66%;
+    }
+    
+    &__medium_6 {
+      width: 50%;
+    }
+    
+    &__medium_7 {
+      width: 58.33%;
+    }
+    
+    &__medium_8 {
+      width: 66.66%;
+
+      &--smaller {
+        width: 64.3%;
+      }
+    }
+  }
+
+}
