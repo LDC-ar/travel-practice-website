@@ -33,12 +33,20 @@
     }
   }
 
-  &__justify-sb {
+  &__justify--sb {
     justify-content: space-between;
   }
 
-  &__alignitems-start {
+  &__justify--end {
+    justify-content: flex-end;
+  }
+
+  &__align-items--start {
     align-items: flex-start;
+  }
+
+  &__align-items--center {
+    align-items: center;
   }
 
   &__gap {
