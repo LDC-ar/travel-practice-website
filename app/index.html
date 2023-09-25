@@ -8,7 +8,7 @@
   <meta name="description" content="Your clarity. One trip away. We create soul restoring journeys that inspire you to be you.">
 </head>
 <body>
-  <img class="original-design" src="assets/images/design-hifi.png" alt="">
+  <!-- <img class="original-design" src="assets/images/design-hifi.png" alt=""> -->
   <header class="site-header">
     <div class="wrapper">
       <a href="#home" class="site-header__logo">
@@ -54,15 +54,15 @@
         <img sizes="(min-width: 970px) 976px, 100vw" srcset="assets/images/first-trip-low-res.jpg 565w, assets/images/first-trip.jpg 976w, assets/images/first-trip-hi-dpi.jpg 1952w" alt="Couple walking down a street.">
       </div>
 
-      <div class="row row--gutters">
-        <div class="row__medium-5 row__mb--until-medium">
+      <div class="grid grid--gutters">
+        <div class="grid__medium-5 grid__mb--until-medium">
           <picture>
             <source sizes="404px" media="(min-width: 1200px)" srcset="assets/images/our-start.jpg 404w, assets/images/our-start-hi-dpi.jpg 808w">
             <source sizes="320px" media="(min-width: 800px)" srcset="assets/images/our-start-portrait.jpg 382w, assets/images/our-start-portrait-hi-dpi.jpg 764w">
             <img srcset="assets/images/our-start-landscape.jpg 800w, assets/images/our-start-landscape-hi-dpi 1600w.jpg" alt="Our founder, Jane Doe">
           </picture>
         </div>
-        <div class="row__medium-7">
+        <div class="grid__medium-7">
           <div class="generic-content-container">
             <h2 class="headline headline--normal headline--mt-0">Here&rsquo;s how we got started&hellip;</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <a href="#">quis nostrud exercitation</a> ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
@@ -79,8 +79,8 @@
       
       <h2 class="section-title"><img class="section-title__icon" src="assets/images/icons/star.svg">Our <strong>Features</strong></h2>
     
-      <div class="row row--gutters-large generic-content-container">
-        <div class="row__medium-6">
+      <div class="grid--2-large grid--gutters-large generic-content-container">
+
           <div class="feature-item">
             <img class="feature-item__icon" src="assets/images/icons/rain.svg">
             <h3 class="feature-item__title">We&rsquo;ll Watch the Weather</h3>
@@ -92,21 +92,20 @@
             <h3 class="feature-item__title">Global Guides</h3>
             <p>We&rsquo;ve scoured the entire planet for the best retreats and beautiful vistas. If there&rsquo;s a corner of the world you want to escape to we know the most scenic and inspiring locations.</p>
           </div>
-        </div>
         
-        <div class="row__medium-6">
           <div class="feature-item">
             <img class="feature-item__icon" src="assets/images/icons/wifi.svg">
             <h3 class="feature-item__title">Wi-Fi Waypoints</h3>
             <p>We only send you on trips to places we can personally vouch for as being amazing. Which means we&rsquo;ve mapped out where local wi-fi spots are and marked them in our app&rsquo;s map view.</p>
           </div>
+
           <div class="feature-item">
             <img class="feature-item__icon" src="assets/images/icons/fire.svg">
             <h3 class="feature-item__title">Survival Kit</h3>
             <p>Everytime you book an escape with us we send you a survival kit with the finest materials. The kit will allow you to setup a tent, start a fire, scratch your own back and lower your taxes.</p>
           </div>
+
         </div>
-      </div>
     </div>
   </section>
 
@@ -114,9 +113,9 @@
     <div class="wrapper wrapper--p0--until-large">
       <h2 class="section-title section-title--blue"><img class="section-title__icon" src="assets/images/icons/comment.svg">Real <strong>Testimonials</strong></h2>
   
-      <div class="row row--gutters-small row--equal-height-at-large row--pt generic-content-container">
-        <div class="row__large-4">
-          <div class="testimonial">
+      <div class="grid--3-large grid--gutters-small grid--equal-height-at-large grid--pt generic-content-container">
+        
+          <div class="testimonial flex__column">
             <div class="testimonial__photo">
               <img sizes="160px" srcset="assets/images/testimonial-jane.jpg 160w, assets/images/testimonial-jane-hi-dpi.jpg 320w" alt="Jane Doe">
             </div>
@@ -124,10 +123,8 @@
             <h4 class="testimonial__subtitle">9 Time Escaper</h4>
             <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.&rdquo;</p>
           </div>
-        </div>
         
-        <div class="row__large-4">
-          <div class="testimonial">
+          <div class="testimonial flex__column">
             <div class="testimonial__photo">
               <img sizes="160px" srcset="assets/images/testimonial-john.jpg 160w, assets/images/testimonial-john-hi-dpi.jpg 320w" alt="John Smith">
             </div>
@@ -135,10 +132,8 @@
             <h4 class="testimonial__subtitle">4 Time Escaper</h4>
             <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur.&rdquo;</p>
           </div>
-        </div>
 
-        <div class="row__large-4">
-          <div class="testimonial testimonial--last">
+          <div class="testimonial testimonial--last flex__column">
             <div class="testimonial__photo">
               <img sizes="160px" srcset="assets/images/testimonial-cat.jpg 160w, assets/images/testimonial-cat-hi-dpi.jpg 320w" alt="Cat McKitty">
             </div>
@@ -146,7 +141,7 @@
             <h4 class="testimonial__subtitle">6 Time Escaper</h4>
             <p>&ldquo;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut.&rdquo;</p>
           </div>
-        </div>
+
       </div>
   
   

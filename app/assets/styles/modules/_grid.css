@@ -1,0 +1,72 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  
+  &--pt {
+    padding-top: 80px;
+  }
+  
+  &__mb--until-medium {
+    margin-bottom: 2rem;
+  }
+
+  &--gutters {
+    column-gap: 5%;
+  }
+
+  &--gutters-small {
+    column-gap: 3.5%;
+  }
+
+  &--gutters-large {
+    column-gap: 8%;
+  }  
+
+  &__medium-5,
+  &__medium-7 {
+    grid-column: span 1;
+  }
+
+  &--2-large {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+  
+  @mixin atMedium {
+    grid-template-columns: repeat(12, 1fr);
+    
+    &__mb--until-medium {
+      margin-bottom: 0;
+    }
+    
+    &__medium-5 {
+      grid-column: span 5;
+    }
+    
+    &__medium-7 {
+      grid-column: span 7;
+    }
+  }
+  
+  @mixin atLarge {
+
+    &__mb--until-large {
+      margin-bottom: 0;
+    }
+    
+    &--3-large {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+  }
+
+  /* Begin equal height rules */
+  &--equal-height-at-large {
+    @mixin atLarge {
+      & > div {
+        display: flex;
+      }
+    }
+  }
+}

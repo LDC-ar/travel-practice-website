@@ -1,10 +1,6 @@
 .page-section {
-  padding: 2rem 0;
+  padding: 5rem 0;
   
-  @mixin atMedium {
-    padding: 4rem 0;
-  }
-
   &--p0--until-medium {
     padding-bottom: 0;
     
