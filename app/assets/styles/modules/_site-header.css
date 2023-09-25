@@ -3,7 +3,12 @@
   z-index: 2;
   width: 100%;
   padding: 1rem 0;
-
+  transition: all .3s ease;
+  
+  &--is-expanded {
+    background-color: rgba(47, 85, 114, .7);
+  }
+  
   @mixin atMedium {
     background-color: rgba(47, 85, 114, .3);
   }
@@ -27,23 +32,98 @@
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: white;
     top: 10px;
     right: 10px;
+    cursor: pointer;
+    z-index: 10;
+    
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      transition: all .3s ease;
+    }
+    
+    &::before {
+      top: 0px;
+      transform-origin: 0 0;
+    }
+    
+    &::after {
+      top: 16px;
+      transform-origin: 0 100%;
+    }
+    
+    &--middle {
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 20px;
+      height: 3px;
+      background-color: #fff;
+      transition: all .3s ease;
+    }
 
     @mixin atMedium {
       display: none;
     }
+
+    &--close-x {
+      &::before {
+        transform: rotate(45deg) scaleX(1.2);
+      }
+
+      .site-header__menu-icon--middle {
+        opacity: 0;
+      }
+
+      &::after {
+        transform: rotate(-45deg) scaleX(1.2);
+      }
+    }
   }
 
   &__menu-content {
-    display: none;
-
+    opacity: 0;
+    z-index: -10;
+    padding-top: 100px;
+    text-align: center;
+    transform: scale(1.2);
+    transition: all .3s ease;
+    
     @mixin atMedium {
+      transform: scale(1);
+      padding-top: 0;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       gap: 2rem;
+      opacity: 1;
+      z-index: 1;
+    }
+    
+    &--is-visible {
+      transform: scale(1);
+      opacity: 1;
+      z-index: 1;
+
+      @mixin atMedium {
+        display: flex;
+      }
+    }
+  }
+
+  &__cta {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+
+    @mixin atMedium {
+      margin: 0;
     }
   }
 }
