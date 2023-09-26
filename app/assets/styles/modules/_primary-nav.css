@@ -25,6 +25,12 @@
         &:hover {
           font-weight: 500;
         }
+
+        @mixin atMedium {
+          &.is-current-link {
+            color: #fabb69;
+          }
+        }
       }
     }
   }
