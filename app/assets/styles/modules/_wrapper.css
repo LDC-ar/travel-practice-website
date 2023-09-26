@@ -8,6 +8,10 @@
   &--medium {
     max-width: 870px;
   }
+
+  &--narrow {
+    max-width: 470px;
+  }
   
   &--p0--until-medium {
     padding-left: 0;

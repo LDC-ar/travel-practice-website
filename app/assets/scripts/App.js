@@ -8,7 +8,23 @@ if (module.hot) {
 }
 
 /* CODE BELOW */
-let mobileMenu = new MobileMenu()
-let stickyHeader = new StickyHeader()
-new RevealOnScroll(document.querySelectorAll(".feature-item"), 75)
-new RevealOnScroll(document.querySelectorAll(".testimonial"), 60)
+new MobileMenu()
+new StickyHeader()
+new RevealOnScroll(document.querySelectorAll(".feature-item"), 80)
+new RevealOnScroll(document.querySelectorAll(".testimonial"), 75)
+let modal
+
+// Load Modal.js script JUST if button is clicked. Otherwise it doesn't load the script on website load. (Best performance)
+document.querySelectorAll(".open-modal").forEach(el => {
+  el.addEventListener("click", e => {
+    e.preventDefault()
+    if (typeof modal == "undefined") {
+      import(/* webpackChunkName: "modal" */ "./modules/Modal").then(modal => {
+        modal = new modal.default()
+        setTimeout(() => modal.openModal(), 20)
+      }).catch(() => console.log("There was an error with the modal"))  
+    } else {
+      modal.openModal()
+    }
+  })
+})
