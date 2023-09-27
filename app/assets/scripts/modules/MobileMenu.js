@@ -7,7 +7,10 @@ class MobileMenu {
   }
 
   events() {
-    this.menuIcon.addEventListener('click', () => this.toggleMenu())
+    this.menuIcon.addEventListener('click', () => {
+      this.toggleMenu()
+      this.toggleAriaLabel()
+    })
   }
 
   toggleMenu() {
@@ -16,6 +19,16 @@ class MobileMenu {
     this.siteHeader.classList.remove("site-header--dark")
     this.menuIcon.classList.toggle("site-header__menu-icon--close-x")
   }
+
+  // Function to toggle menuIcon aria-label
+  toggleAriaLabel() {
+	// Check if the menu is open and set the aria-label accordingly
+	  if (this.menuIcon.classList.contains('site-header__menu-icon--close-x')) {
+      this.menuIcon.setAttribute('aria-label', 'Close menu');
+	  } else {
+      this.menuIcon.setAttribute('aria-label', 'Open menu');
+	  }
+}
 }
 
 export default MobileMenu;
